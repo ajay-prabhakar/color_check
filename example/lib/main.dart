@@ -34,9 +34,31 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("hello"),
-        backgroundColor: checkColor("#FFFF12"),
+        backgroundColor: getCurrentColor(),
+        title: Text("hello World"),
+      ),
+      body: Column(
+        children: [
+          Center(
+            child: RaisedButton(
+              child: Text("change color"),
+              color: getCurrentColor(),
+              onPressed: (){
+                setState(() {
+                  changeColor();
+                });
+              },
+            ),
+          )
+        ],
       ),
     );
   }
+
+  @override
+  void initState() {
+    ColorCheckButtonState("#FF6347").init();
+    super.initState();
+  }
+
 }

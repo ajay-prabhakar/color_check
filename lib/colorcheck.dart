@@ -1,20 +1,40 @@
 library colorcheck;
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 5;
+
+class ColorCheckButtonState {
+  String color;
+
+  ColorCheckButtonState(String color) {
+    this.color = color;
+  }
+
+  static int r, g, b;
+  static Color currentColor;
+
+  void init() {
+    r = int.parse(color.substring(1, 3), radix: 16);
+    g = int.parse(color.substring(3, 5), radix: 16);
+    b = int.parse(color.substring(5, 7), radix: 16);
+    currentColor = Color.fromRGBO(r, g, b, 1);
+  }
+
 }
 
-Color checkColor(String color){
-  int r1 = int.parse(color.substring(1, 3), radix: 16);
-  int g1 = int.parse(color.substring(3, 5), radix: 16);
-  int b1 = int.parse(color.substring(5, 7), radix: 16);
-
-  return Color.fromRGBO(r1, g1, b1, 0.4);
+Color getCurrentColor() {
+  return ColorCheckButtonState.currentColor;
 }
+
+void changeColor() {
+  ColorCheckButtonState.b = ColorCheckButtonState.b - 5;
+  print(ColorCheckButtonState.currentColor.toString());
+  ColorCheckButtonState.currentColor = Color.fromRGBO(ColorCheckButtonState.r,
+      ColorCheckButtonState.g, ColorCheckButtonState.b, 1);
+}
+
 
 int getColorHexFromStr(String colorStr) {
   colorStr = "FF" + colorStr;
