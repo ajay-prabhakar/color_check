@@ -45,7 +45,7 @@ Color getCurrentColor() {
 }
 
 void changeColor() {
-  ColorCheck.colorNum = ColorCheck.colorNum - 10000;
+  ColorCheck.colorNum = ColorCheck.colorNum + 10;
   print(ColorCheck.colorNum.toString());
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
 }
