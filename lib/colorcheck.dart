@@ -1,5 +1,7 @@
 library colorcheck;
 
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -44,8 +46,16 @@ Color getCurrentColor() {
   return ColorCheck.currentColor;
 }
 
-void changeColor() {
-  ColorCheck.colorNum = ColorCheck.colorNum + 10;
+void changeColor(int strength) {
+  if (strength > 10) {
+    print("strength value should be from 1 to 10");
+    return;
+  }
+  if (ColorCheck.colorNum < pow(10, 10)) {
+    ColorCheck.colorNum = ColorCheck.colorNum + pow(10, strength);
+  } else if (ColorCheck.colorNum <= 0) {
+    ColorCheck.colorNum = ColorCheck.colorNum - pow(10, strength);
+  }
   print(ColorCheck.colorNum.toString());
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
 }
