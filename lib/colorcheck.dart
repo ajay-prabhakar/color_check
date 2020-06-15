@@ -52,10 +52,19 @@ void changeColor(int strength) {
     return;
   }
   if (ColorCheck.colorNum < pow(10, 10)) {
-    ColorCheck.colorNum = ColorCheck.colorNum + pow(10, strength);
+    ColorCheck.colorNum = ColorCheck.colorNum + _getRandomNum(strength);
   } else if (ColorCheck.colorNum <= 0) {
-    ColorCheck.colorNum = ColorCheck.colorNum - pow(10, strength);
+    ColorCheck.colorNum = ColorCheck.colorNum - _getRandomNum(strength);
   }
   print(ColorCheck.colorNum.toString());
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
+}
+
+int _getRandomNum(int digitCount) {
+  var rnd = new Random();
+  var next = rnd.nextDouble() * pow(10, digitCount);
+  while (next < pow(10, digitCount-10)) {
+    next *= 10;
+  }
+  return next.toInt();
 }

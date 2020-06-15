@@ -285,7 +285,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           onPressed: (){
             setState(() {
-              changeColor(3);
+              changeColor(1);
             });
           },
         ),
