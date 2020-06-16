@@ -57,8 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 400.0,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(200.0),
-                        color: getCurrentColor()
-                            .withOpacity(0.4)),
+                        color: getCurrentColor().withOpacity(0.4)),
                   ),
                 ),
                 Positioned(
@@ -69,8 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 300.0,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(150.0),
-                          color: getCurrentColor()
-                              .withOpacity(0.5))),
+                          color: getCurrentColor().withOpacity(0.5))),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -216,7 +214,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 45, right: 80,top: 10),
+                    padding:
+                        const EdgeInsets.only(left: 45, right: 80, top: 10),
                     child: Column(
                       children: [
                         Text("2 Item(s)",
@@ -283,7 +282,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 20,
                 fontWeight: FontWeight.bold),
           ),
-          onPressed: (){
+          onPressed: () {
             setState(() {
               changeColor(1);
             });

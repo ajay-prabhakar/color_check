@@ -6,7 +6,6 @@ const kBlueColor = Color(0xFF6E8AFA);
 const kBestSellerColor = Color(0xFFFFD073);
 const kGreenColor = Color(0xFF49CC96);
 
-
 // My Text Styles
 const kHeadingextStyle = TextStyle(
   fontSize: 25,
