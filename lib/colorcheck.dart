@@ -1,10 +1,8 @@
 library colorcheck;
 
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
 class ColorCheck {
   String color;
@@ -56,14 +54,18 @@ void changeColor(int strength) {
   } else if (ColorCheck.colorNum <= 0) {
     ColorCheck.colorNum = ColorCheck.colorNum - _getRandomNum(strength);
   }
-  print(ColorCheck.colorNum.toString());
+  print("The current color is " +
+      Color(ColorCheck.colorNum).toString() +
+      "    " +
+      DateTime.now().toString() +
+      "\n");
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
 }
 
 int _getRandomNum(int digitCount) {
   var rnd = new Random();
   var next = rnd.nextDouble() * pow(10, digitCount);
-  while (next < pow(10, digitCount-10)) {
+  while (next < pow(10, digitCount - 10)) {
     next *= 10;
   }
   return next.toInt();
