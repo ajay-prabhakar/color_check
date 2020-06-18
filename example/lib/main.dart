@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   height: 250.0,
                   width: double.infinity,
-                  color: getCurrentColor(),
+                  color: getRandomColor(),
                 ),
                 Positioned(
                   bottom: 50.0,
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 400.0,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(200.0),
-                        color: getCurrentColor().withOpacity(0.4)),
+                        color: getRandomColor().withOpacity(0.4)),
                   ),
                 ),
                 Positioned(
@@ -222,7 +222,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: TextStyle(
                               fontSize: 23,
                               fontWeight: FontWeight.w500,
-                              color: getCurrentColor(),
+                              color: getRandomColor(),
                             )),
                         Text("added to cart",
                             style: TextStyle(
@@ -271,7 +271,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Container(
         margin: EdgeInsets.only(right: 10, top: 10),
         decoration: BoxDecoration(
-          color: getCurrentColor(),
+          color: getRandomColor(),
           borderRadius: BorderRadius.circular(50),
         ),
         child: OutlineButton(
@@ -284,7 +284,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           onPressed: () {
             setState(() {
-              changeColor(1);
+              getRandomColor();
             });
           },
         ),

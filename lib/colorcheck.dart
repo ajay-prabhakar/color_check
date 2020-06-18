@@ -62,6 +62,16 @@ void changeColor(int strength) {
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
 }
 
+Color getRandomColor(){
+  int randomNum = _getRandomNum(10);
+  print("The Random color is " +
+      Color(randomNum).toString() +
+      "    " +
+      DateTime.now().toString() +
+      "\n");
+  return Color(randomNum);
+}
+
 int _getRandomNum(int digitCount) {
   var rnd = new Random();
   var next = rnd.nextDouble() * pow(10, digitCount);
