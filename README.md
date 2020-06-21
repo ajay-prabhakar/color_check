@@ -36,7 +36,7 @@ Usage
 Color objects can be check or compare using any of a few available constructors.
 
 #### How it works
-Baiscally, you have to give one color as input to get suggesions and you have to choose any button to change the colors as shown in GIF   
+Baiscally, you have to give one color as input to get suggesions and you have to choose any button to change the colors as shown in GIF the new colord which appear on UI will be printed in logs so, you can pick from that 
 
 
 initialy give some color input in `initState`
@@ -67,3 +67,37 @@ BoxDecoration(
           borderRadius: BorderRadius.circular(50),
         )
 ```
+
+you can apply to multipule widget also
+
+</br>
+
+### Random color
+
+You can get the color if you didn't like any colors so you can choose one from it
+
+### Usage
+
+Here you don't need to initialize anything, stright away choose any button to change the color. in onPressed add the below method
+
+```dart
+ onPressed: () {
+            setState(() {
+              getRandomColor();
+            });
+          },
+```
+
+From here you can get the random colors, you have to apply them to widgets
+
+```dart
+BoxDecoration(
+          color: getRandomColor(),
+          borderRadius: BorderRadius.circular(50),
+        )
+```
+
+</br>
+
+Thanks for Viewing and using, Happy coding :)
+Feel free to contact me
