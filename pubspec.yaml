@@ -1,7 +1,8 @@
 name: colorcheck
 description: A new Flutter package.
 version: 0.0.1
-author: chromicle
+authors:
+  - ajayprabhakar369@gmail.com
 homepage: https://github.com/Chromicle/color_check/blob/master/lib/colorcheck.dart
 
 environment:
