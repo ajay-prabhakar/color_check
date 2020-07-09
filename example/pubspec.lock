@@ -39,9 +39,9 @@ packages:
   colorcheck:
     dependency: "direct main"
     description:
-      path: "C:\\Users\\Ajayprabhakarrao\\FlutterProjects\\color_check"
-      relative: false
-    source: path
+      name: colorcheck
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.0.1"
   convert:
     dependency: transitive

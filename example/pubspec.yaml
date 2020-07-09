@@ -10,8 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  colorcheck:
-    path: C:\Users\Ajayprabhakarrao\FlutterProjects\color_check
+  colorcheck: 0.0.1
   flutter_svg: ^0.17.4
   simple_animations: ^2.2.1
   page_transition: ^1.1.5
