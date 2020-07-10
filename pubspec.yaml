@@ -1,6 +1,6 @@
 name: colorcheck
-description: A new Flutter package.
-version: 0.0.1
+description: A flutter package exposing a Color class which can be used to create, convert, and compare colors.
+version: 0.0.2
 homepage: https://github.com/Chromicle/color_check/blob/master/lib/colorcheck.dart
 
 environment:

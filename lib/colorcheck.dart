@@ -44,6 +44,7 @@ Color getCurrentColor() {
   return ColorCheck.currentColor;
 }
 
+// change color function
 void changeColor(int strength) {
   if (strength > 10) {
     print("strength value should be from 1 to 10");
@@ -62,7 +63,8 @@ void changeColor(int strength) {
   ColorCheck.currentColor = Color(ColorCheck.colorNum);
 }
 
-Color getRandomColor(){
+// random color function
+Color getRandomColor() {
   int randomNum = _getRandomNum(10);
   print("The Random color is " +
       Color(randomNum).toString() +
